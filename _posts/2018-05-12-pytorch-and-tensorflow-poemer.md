@@ -21,7 +21,7 @@ pytorch基本很顺利，在windows下都能顺利的跑起来，只是因为数
 
 当输出参数时temperature=0.2，它还竟然发明了自己的语言
 
-```txt
+```
 light of the day. I have see the days the day.
 I have see the day.
 The stars the day.
@@ -36,36 +36,36 @@ I have see the love the day.
 **言归正传
 **
 以下时pytorch正常作的诗，
-```txt
+```
 light put their silence? 
 The water your smileds tree, low vadan, the rocks they love, 
 when pley of the doms in the voice, souther, 
 by not the day, Wesad of Hinf wished into lord.
 ```
 
-```txt
+```
 light?
 I down the childer as love.
 God death to rew-music its heart love and namet to the dornk's have flocks its meaning the realt is listening,
 like that heart songraks is sadont for meanic.
 My greats friend
 ```
-```txt
+```
 when my love its sing come own great to the light. 
 Let me of read, My the clor. 
 Love into the Eater of than our day. 
 Clamm to me into he when shore thy lies thoopening for thee my world torm, do it!
 ```
-```txt
+```
 light ups, where clouds wilors owes to my from me for its hame the immort, not then bemer is powen in the night of its great its parks aflity parket, nall with this quifild in the dight the Impy will kiss
 ```
-```txt
+```
 lights and story for its carrying smallery? They could shall deathaven. In the work of quies in shit regive of the evening truit? Thy like love trempletp. It adren and death and are. I have love it.
 ```
-```txt
+```
 light through of the are to my Hide's deventing born canting to smalls its in the greath the world that passing thoughts light---I hear the songlis in the dark to her veile your stre the greath--thee stres
 ```
-```txt
+```
 light. God's lays. I dann the creamp. Night in thise of thereach ones thy past. I silent and flower whis woman and its love at work and the flotter the sinour the light, like the bird childent
 ```
 怎么样？虽然还有很多俚语和不语法问题，不过基本的哲学和文艺范都出来了，而且字词简练很有飞鸟集的韵味。
