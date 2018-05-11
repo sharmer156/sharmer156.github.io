@@ -20,9 +20,8 @@ pytorch基本很顺利，在windows下都能顺利的跑起来，只是因为数
 ![网易有道词典 桌面版， 好吧你一个翻译软件都想成为光明了](https://i.imgur.com/1RDkF1s.jpg) 看来软件圈确实太黑暗了
 
 当输出参数时temperature=0.2，它还竟然发明了自己的语言
-
-```txt
-light of the day. I have see the days the day. I have see the day. The stars the day.I have see the stars the stars in the stars in the stars and she dark the works the day. I have see the love the day. 
+```js
+light of the day. I have see the days the day. I have see the day. The stars the day.I have see the stars the stars in the stars in the stars and she dark the works the day. I have see the love the day.
 ```
 眼熟吧，对照下FB的聊天机器人创造的语言，可能会有新发现。
 如果temperature不断上升，效果喜人，
