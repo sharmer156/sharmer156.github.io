@@ -16,8 +16,11 @@ author: HyG
 开始接触人工智能的时候已经安装过一些默认应用，但一直未成功，这次花了一点时间又重新选定了主流框架，重新开始，一个是使用pytorch,另一个是使用tensorflow,pytorch学习泰戈尔的飞鸟集（英文28297b）；tensorflow的学习全唐诗(中文近10M）。
 
 ----------
+
 # pytorch英文诗人
-pytorch基本很顺利，在windows下都能顺利的跑起来，只是因为数据过小没用GPU大概3分钟就训练完了，结果吗 各种意外，甚至连几大翻译软件都给整哭了.
+
+pytorch基本很顺利，在windows下都能顺利的跑起来，只是因为数据过小没用GPU大概3分钟就训练完了，结果吗各种意外，甚至连几大翻译软件都给整哭了.
+
 ![](https://i.imgur.com/iWfddmn.jpg)
 ![](https://i.imgur.com/jGFDujx.jpg)
 看来软件圈确实太黑暗了当输出参数时temperature=0.2，它还竟然发明了自己的语言眼熟吧，对照下FB的聊天机器人创造的语言，可能会有新发现。如果temperature不断上升，效果喜人，
