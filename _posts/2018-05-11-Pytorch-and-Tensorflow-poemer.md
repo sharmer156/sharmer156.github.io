@@ -18,9 +18,6 @@ author: HyG
 ----------
 
 # pytorch英文诗人
-## pytorch基本很顺利，在windows下都能顺利的跑起来，只是因为数据过小没用GPU大概3分钟就训练完了，结果吗各种意外，甚至连几大翻译软件都给整哭了.
-![](https://i.imgur.com/iWfddmn.jpg)
-![](https://i.imgur.com/jGFDujx.jpg)
 看来软件圈确实太黑暗了当输出参数时temperature=0.2，它还竟然发明了自己的语言眼熟吧，对照下FB的聊天机器人创造的语言，可能会有新发现。如果temperature不断上升，效果喜人，
 ![](https://i.imgur.com/i8sfVq6.jpg)
 
