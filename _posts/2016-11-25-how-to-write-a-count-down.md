@@ -1,102 +1,168 @@
 ---
 layout: post
-title:  "前端如何写一个精确的倒计时"
-categories: JavaScript
-tags:  countdown JavaScript
-author: HyG
+title:  "写诗机器人终于能正常写诗"
+categories: jekyll
+tags:  jekyll
+author: 飘的沙鸥
 ---
 
 * content
 {:toc}
 
-关于写倒计时大家可能都都比较熟悉，使用 setTimeout 或 setInterval 就可以搞定。几秒钟或者几分钟的倒计时这样写没有问题，但是如果是长时间的倒计时，这样写就会不准确。如果用户修改了他的设备时间，这样的倒计时就没有意义了。今天就说说写一个精确的倒计时的方法。
+开始接触人工智能的时候已经安装过一些默认应用，但一直未成功，这次花了一点时间又重新选定了主流框架，重新开始，一个是使用pytorch,另一个是使用tensorflow,pytorch学习泰戈尔的飞鸟集（英文28297b）；tensorflow的学习全唐诗(中文近10M）。
 
-![](https://img.alicdn.com/tfs/TB18QnlOpXXXXcVXpXXXXXXXXXX-388-256.png)
+----------
+# pytorch英文诗人
+pytorch基本很顺利，在windows下都能顺利的跑起来，只是因为数据过小没用GPU大概3分钟就训练完了，结果吗 各种意外，甚至连几大翻译软件都给整哭了
 
+![google翻译 投降的表情！](https://i.imgur.com/TGs1yNx.png)
 
+![网易有道词典 桌面版， 好吧你一个翻译软件都想成为光明了](https://i.imgur.com/1RDkF1s.jpg) 看来软件圈确实太黑暗了
 
+当输出参数时temperature=0.2，它还竟然发明了自己的语言
 
-## 原理
+```txt
+light of the day. I have see the days the day. 
+I have see the day. 
+The stars the day.
+I have see the stars the stars in the stars in the stars and she dark the works the day. 
+I have see the love the day. 
+```
+眼熟吧，对照下FB的聊天机器人创造的语言，可能会有新发现。
+如果temperature不断上升，效果喜人，
+![](https://i.imgur.com/i8sfVq6.jpg)
+```txt
+print(evaluate('light', 200, temperature=1200000))
+light^U\x8I^< Gy~*AB}0-'R"(.glZ:Mjz){%edg%l.HB,p,aEv;p%9Q2.v'HWp\]|TTDzh^DE	Kj5l<;	A!xPYa]5}V{mHR>qh[V56q\5]y<]g\Ds$@<bHNOHuai-.,9mw
+#9mx5</Y393rZNde)8 Ju
+d>8/`u)Zs3AYud{Z5OjG$pD1_"N:G	dLc
+```
+机器的语言天赋真是厉害啊。
 
-众所周知 setTimeout 或者 setInterval 调用的时候会有微小的误差。有人做了一个 [demo](https://bl.ocks.org/kenpenn/raw/92ebaa71696b4c4c3acd672b1bb3f49a/) 来观察这个现象并对其做了修正。短时间的误差倒也可以接受，但是作为一个长时间的倒计时，误差累计就会导致倒计时不准确。
-
-因此我们可以在获取剩余时间的时候，每次 new 一个设备时间，因为设备时间的流逝相对是准确的，并且如果设备打开了网络时间同步，也会解决这个问题。
-
-但是，如果用户修改了设备时间，那么整个倒计时就没有意义了，用户只要将设备时间修改为倒计时的 endTime 就可以轻易看到倒计时结束是页面的变化。因此一开始获取服务端时间就是很重要的。
-
-简单的说，一个简单的精确倒计时原理如下：
-
-- 初始化时请求一次服务器时间 serverTime，再 new 一个设备时间 deviceTime
-- deviceTime 与 serverTime 的差作为时间偏移修正
-- 每次递归时 new 一个系统时间，解决 setTimeout 不准确的问题
-
-## 代码
-
-获取剩余时间的代码如下：
-
-```js
-/**
- * 获取剩余时间
- * @param  {Number} endTime    截止时间
- * @param  {Number} deviceTime 设备时间
- * @param  {Number} serverTime 服务端时间
- * @return {Object}            剩余时间对象
- */
-let getRemainTime = (endTime, deviceTime, serverTime) => {
-    let t = endTime - Date.parse(new Date()) - serverTime + deviceTime
-    let seconds = Math.floor((t / 1000) % 60)
-    let minutes = Math.floor((t / 1000 / 60) % 60)
-    let hours = Math.floor((t / (1000 * 60 * 60)) % 24)
-    let days = Math.floor(t / (1000 * 60 * 60 * 24))
-    return {
-        'total': t,
-        'days': days,
-        'hours': hours,
-        'minutes': minutes,
-        'seconds': seconds
-    }
-}
+**言归正传
+**
+以下时pytorch正常作的诗，
+```txt
+light put their silence? 
+The water your smileds tree, low vadan, the rocks they love, 
+when pley of the doms in the voice, souther, 
+by not the day, Wesad of Hinf wished into lord.
 ```
 
-<del>获取服务器时间可以使用 mtop 接口 `mtop.common.getTimestamp` </del>
-
-然后可以通过下面的方式来使用：
-
-```js
-// 获取服务端时间（获取服务端时间代码略）
-getServerTime((serverTime) => {
-
-    //设置定时器
-    let intervalTimer = setInterval(() => {
-
-        // 得到剩余时间
-        let remainTime = getRemainTime(endTime, deviceTime, serverTime)
-
-        // 倒计时到两个小时内
-        if (remainTime.total <= 7200000 && remainTime.total > 0) {
-            // do something
-
-        //倒计时结束
-        } else if (remainTime.total <= 0) {
-            clearInterval(intervalTimer);
-            // do something
-        }
-    }, 1000)
-})
+```txt
+light?
+I down the childer as love.
+God death to rew-music its heart love and namet to the dornk's have flocks its meaning the realt is listening,
+like that heart songraks is sadont for meanic.
+My greats friend
 ```
+```txt
+when my love its sing come own great to the light. 
+Let me of read, My the clor. 
+Love into the Eater of than our day. 
+Clamm to me into he when shore thy lies thoopening for thee my world torm, do it!
+```
+```txt
+light ups, where clouds wilors owes to my from me for its hame the immort, not then bemer is powen in the night of its great its parks aflity parket, nall with this quifild in the dight the Impy will kiss
+```
+```txt
+lights and story for its carrying smallery? They could shall deathaven. In the work of quies in shit regive of the evening truit? Thy like love trempletp. It adren and death and are. I have love it.
+```
+```txt
+light through of the are to my Hide's deventing born canting to smalls its in the greath the world that passing thoughts light---I hear the songlis in the dark to her veile your stre the greath--thee stres
+```
+```txt
+light. God's lays. I dann the creamp. Night in thise of thereach ones thy past. I silent and flower whis woman and its love at work and the flotter the sinour the light, like the bird childent
+```
+怎么样？虽然还有很多俚语和不语法问题，不过基本的哲学和文艺范都出来了，而且字词简练很有飞鸟集的韵味。
 
-这样的的写法也可以做到准确倒计时，同时也比较简洁。不需要隔段时间再去同步一次服务端时间。
 
-## 补充
 
-在写倒计时的时候遇到了一个坑这里记录一下。
+----------
+# tensorflow 中文诗人
+这个就没pytorch那么顺利了，先windows上训练花的时间，1080TI的GPU上跑了近5个小时，然后模型还不是全部保存，只有24～48（正常应该是1～50每6个保存一个模型）
+然后
+```txt
+python compose_poem.py
+```
+各种出错
+```
+ Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
+Traceback (most recent call last):
+  File "compose_poem.py", line 92, in <module>
+    poem = gen_poem(begin_char)
+  File "compose_poem.py", line 78, in gen_poem
+    feed_dict={input_data: x, end_points['initial_state']: last_state})
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow\python\client\session.py", line 895, in run
+    run_metadata_ptr)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow\python\client\session.py", line 1065, in _run
+    feed_dict = nest.flatten_dict_items(feed_dict)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow\python\util\nest.py", line 251, in flatten_dict_items
+    % (new_i))
+ValueError: Could not flatten dictionary: key Tensor("MultiRNNCellZeroState/BasicLSTMCellZeroState/zeros:0", shape=(1, 128), dtype=float32) is not unique.
 
-**千万别在倒计时结束的时候请求接口**。会让服务端瞬间 QPS 峰值达到非常高。
+```
+```
+Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
+Traceback (most recent call last):
+```
+上面这段应该还只是小错，
+下面的ValueError才是致命的
+```
+ValueError: Could not flatten dictionary: key Tensor("MultiRNNCellZeroState/BasicLSTMCellZeroState/zeros:0", shape=(1, 128), dtype=float32) is not unique.
 
-![](https://img.alicdn.com/tfs/TB1LBzjOpXXXXcnXpXXXXXXXXXX-154-71.png)
-
-如果在倒计时结束的时候要使用新的数据渲染页面，正确的做法是：
-
-在倒计时结束前的一段时间里，先请求好数据，倒计时结束后，再渲染页面。
-
-关于倒计时，如果你有什么更好的解决方案，欢迎评论交流。
+```
+作为小白，最快的方法是...最后直接换到虚拟ubuntu上运行
+修改一下model下的checkpoint，竟然成功了，来感受下
+```
+python main.py
+/home/chz/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+## please input the first character:荣
+## loading corpus from ./model/
+I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+荣华处似足何之，阁上僧繇太里徒。
+即觉住居还老处，箫声相劝为沧溟。
+```
+其实都是些小坑，很多时候只是惯性思维t太...，10M的诗歌数据输入进去，在模型就给砍掉一半，然后结果呢，都还能接受（因为直接生成中文吧，偶尔还有bug）
+```
+python main.py
+/home/chz/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+## please input the first character:夜
+## loading corpus from ./model/
+ I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+```
+感受下，10M全唐诗训练下正常的诗歌吧
+```
+夜来睡夜夜，原鸟不可行。
+已是好金掌，髯应负死中。
+惊薪沾手稻，夜蚌夺残云。
+谁敢清衣力，无地可工纁。
+```
+```
+夜坐草萧条，莫求深柳枝。
+乱思方举上，黄众未归迟。
+我访趋朝教，荆州树胜金。
+晚来当叶乱，潮入玉张宫。
+```
+```
+夜猿吟不同，风积楼交莲。
+似石踪中剑，烟浓絮上天。
+沙风寒带影，沙迥见青猿。
+相次如闲旅，千花谢孟津。
+```
+```
+夜月尔南峡，旅来何路长。
+恋人到已姓，何事阻闽家。
+```
+```
+夜来辛苦久不吟，故洛来无火，古处在天仙一千株云。
+```
+```
+夜阳玄岳夜，为我爱华堂。
+笋与光前卧，神仙峰下虚。
+钱亏白马少，不可见金沙。
+泉石迹未足，此始横国秋。
+```
+今天暂时写到这里，还有许多问题需要解决和进步，ALL in AI it's just the beginning!

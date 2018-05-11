@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "写诗机器人终于能正常写诗了，而且他们发明了自己的语言"
-categories: 网站，JavaScript
-tags:  NPL--写诗机器人
+title:  "写诗机器人终于能正常写诗"
+categories: jekyll
+tags:  jekyll
 author: 飘的沙鸥
 ---
 
