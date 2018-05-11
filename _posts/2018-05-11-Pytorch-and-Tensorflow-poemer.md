@@ -1,37 +1,46 @@
 ---
 layout: post
-title:  "写诗机器人终于能正常写诗了，而且他们发明了自己的语言"
-categories: 网站，JavaScript
-tags:  NPL--写诗机器人
-author: 飘的沙鸥
+title:  "使用 JavaScript 创建并下载文件"
+categories: JavaScript
+tags:  文件 下载 JavaScript
+author: HyG
 ---
 
 * content
 {:toc}
+
+本文将介绍如何使用 JavaScript 创建文件，并自动/手动将文件下载。这在导出原始数据时会比较方便。
+
+## 先上代码
+
+```js
+/**
+ * 创建并下载文件
+ * @param  {String} fileName 文件名
+ * @param  {String} content  文件内容
+ */
+function createAndDownloadFile(fileName, content) {
+    var aTag = document.createElement('a');
+    var blob = new Blob([content]);
+    aTag.download = fileName;
+    aTag.href = URL.createObjectURL(blob);
+    aTag.click();
+    URL.revokeObjectURL(blob);
+}
+```
 
 开始接触人工智能的时候已经安装过一些默认应用，但一直未成功，这次花了一点时间又重新选定了主流框架，重新开始，一个是使用pytorch,另一个是使用tensorflow,pytorch学习泰戈尔的飞鸟集（英文28297b）；tensorflow的学习全唐诗(中文近10M）。
 
 ----------
 # pytorch英文诗人
 pytorch基本很顺利，在windows下都能顺利的跑起来，只是因为数据过小没用GPU大概3分钟就训练完了，结果吗 各种意外，甚至连几大翻译软件都给整哭了
-
 ![google翻译 投降的表情！](https://i.imgur.com/TGs1yNx.png)
-
 ![网易有道词典 桌面版， 好吧你一个翻译软件都想成为光明了](https://i.imgur.com/1RDkF1s.jpg) 看来软件圈确实太黑暗了
-
 当输出参数时temperature=0.2，它还竟然发明了自己的语言
-
-```txt
-light of the day. I have see the days the day. 
-I have see the day. 
-The stars the day.
-I have see the stars the stars in the stars in the stars and she dark the works the day. 
-I have see the love the day. 
-```
 眼熟吧，对照下FB的聊天机器人创造的语言，可能会有新发现。
 如果temperature不断上升，效果喜人，
 ![](https://i.imgur.com/i8sfVq6.jpg)
-```txt
+```
 print(evaluate('light', 200, temperature=1200000))
 light^U\x8I^< Gy~*AB}0-'R"(.glZ:Mjz){%edg%l.HB,p,aEv;p%9Q2.v'HWp\]|TTDzh^DE	Kj5l<;	A!xPYa]5}V{mHR>qh[V56q\5]y<]g\Ds$@<bHNOHuai-.,9mw
 #9mx5</Y393rZNde)8 Ju
