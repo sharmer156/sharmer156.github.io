@@ -21,7 +21,7 @@ pytorch基本很顺利，在windows下都能顺利的跑起来，只是因为数
 
 当输出参数时temperature=0.2，它还竟然发明了自己的语言
 
-```txt
+```
 light of the day. I have see the days the day. 
 I have see the day. 
 The stars the day.
@@ -31,7 +31,7 @@ I have see the love the day.
 眼熟吧，对照下FB的聊天机器人创造的语言，可能会有新发现。
 如果temperature不断上升，效果喜人，
 ![](https://i.imgur.com/i8sfVq6.jpg)
-```txt
+```
 print(evaluate('light', 200, temperature=1200000))
 light^U\x8I^< Gy~*AB}0-'R"(.glZ:Mjz){%edg%l.HB,p,aEv;p%9Q2.v'HWp\]|TTDzh^DE	Kj5l<;	A!xPYa]5}V{mHR>qh[V56q\5]y<]g\Ds$@<bHNOHuai-.,9mw
 #9mx5</Y393rZNde)8 Ju
