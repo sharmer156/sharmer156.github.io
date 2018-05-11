@@ -41,13 +41,6 @@ pytorch基本很顺利，在windows下都能顺利的跑起来，只是因为数
 
 当输出参数时temperature=0.2，它还竟然发明了自己的语言
 
-```
-light of the day. I have see the days the day. 
-I have see the day. 
-The stars the day.
-I have see the stars the stars in the stars in the stars and she dark the works the day. 
-I have see the love the day. 
-```
 眼熟吧，对照下FB的聊天机器人创造的语言，可能会有新发现。
 如果temperature不断上升，效果喜人，
 ![](https://i.imgur.com/i8sfVq6.jpg)
