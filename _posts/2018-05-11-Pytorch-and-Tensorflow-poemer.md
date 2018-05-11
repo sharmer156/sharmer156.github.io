@@ -1,13 +1,33 @@
 ---
 layout: post
-title:  "写诗机器人终于能正常写诗了，而且他们发明了自己的语言"
-categories: 网站，JavaScript
-tags:  NPL--写诗机器人
-author: 飘的沙鸥
+title:  "使用 JavaScript 创建并下载文件"
+categories: JavaScript
+tags:  文件 下载 JavaScript
+author: HyG
 ---
 
 * content
 {:toc}
+
+本文将介绍如何使用 JavaScript 创建文件，并自动/手动将文件下载。这在导出原始数据时会比较方便。
+
+## 先上代码
+
+```js
+/**
+ * 创建并下载文件
+ * @param  {String} fileName 文件名
+ * @param  {String} content  文件内容
+ */
+function createAndDownloadFile(fileName, content) {
+    var aTag = document.createElement('a');
+    var blob = new Blob([content]);
+    aTag.download = fileName;
+    aTag.href = URL.createObjectURL(blob);
+    aTag.click();
+    URL.revokeObjectURL(blob);
+}
+```
 
 开始接触人工智能的时候已经安装过一些默认应用，但一直未成功，这次花了一点时间又重新选定了主流框架，重新开始，一个是使用pytorch,另一个是使用tensorflow,pytorch学习泰戈尔的飞鸟集（英文28297b）；tensorflow的学习全唐诗(中文近10M）。
 
