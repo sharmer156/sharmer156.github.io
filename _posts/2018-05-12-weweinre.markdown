@@ -11,7 +11,3 @@ tags: Weinre WebApp 调试工具 JavaScript HTML CSS
 
 
 ## 什么是 weinre？
-
-[weinre官网](http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html) 上
-本文将介绍如何使用 JavaScript 创建文件，并自动/手动将文件下载。这在导出原始数据时会比较方便。
-开始接触人工智能的时候已经安装过一些默认应用，但一直未成功，这次花了一点时间又重新选定了主流框架，重新开始，一个是使用pytorch,另一个是使用tensorflow,pytorch学习泰戈尔的飞鸟集英文28297b；tensorflow 的学习全唐诗中文近10M。
