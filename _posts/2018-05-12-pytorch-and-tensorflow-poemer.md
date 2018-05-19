@@ -13,6 +13,10 @@ author: 飘的沙鸥
 
 ----------
 
+
+
+
+![google翻译 投降的表情！](https://i.imgur.com/TGs1yNx.png)
 ## pytorch英文诗人
 pytorch基本很顺利，在windows下都能顺利的跑起来，只是因为数据过小没用GPU大概3分钟就训练完了，结果吗 各种意外，甚至连几大翻译软件都给整哭了
 
