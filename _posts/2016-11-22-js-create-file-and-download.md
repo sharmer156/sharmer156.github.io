@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "使用 JavaScript 创建并下载文件"
-categories: JavaScript
+title:  sketchup结合google earth下载地形数据 "
+categories: 
 tags:  文件 下载 JavaScript
-author: HyG
+author: 飘的沙鸥
 ---
 
 * content
