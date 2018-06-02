@@ -12,12 +12,13 @@ author: 飘的沙鸥
 
 ----------
 
+
+
+
+
 # 1. 下载最新版sketchup 
 
 官网 https://www.sketchup.com/
-
-
-
 
 # 2. 安装软件 打开软件后，文件-地理位置
 
