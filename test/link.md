@@ -24,6 +24,6 @@ title:  "网站链接 "
 
 ## 在线小工具
 - [数学公式](https://www.codecogs.com/latex/eqneditor.php) 
-- |[PDF转MD](http://pdf2md.morethan.io/)|[html转MD](https://sharmer156.github.io/test)|[PDF在线转换及编辑工具](https://smallpdf.com/cn)
+- |[PDF转MD](http://pdf2md.morethan.io/)|[html转MD](https://sharmer156.github.io/test)|[PDF在线转换及编辑工具](https://smallpdf.com/cn)|[小书匠](http://markdown.xiaoshujiang.com/)markdown与导图结合
 - |[文字换行工具](https://www.textfixer.com/tools/remove-line-breaks.php)|
 - [在线小工具](https://tool.lu/c/developer)（网页制作类使用）|
