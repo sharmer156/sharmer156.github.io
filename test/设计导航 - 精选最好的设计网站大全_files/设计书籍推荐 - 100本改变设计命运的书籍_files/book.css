@@ -1,0 +1,98 @@
+/*
+
+  Project: 设计书籍导航;
+
+  Project URL: http://hao.shejidaren.com/book.html;
+
+  Designer: shejidaren.com;
+
+  News Style 2016.11.25
+
+*/
+
+
+/*
+深绿：#008B60
+浅背：#DAE6E8
+深字：#383D40
+浅字：#8B9B9E
+*/
+.right-side {background-image: none;}
+.box-main {padding:0;margin:0;max-width:100%;}
+.box-main .book-container{max-width: 1162px; margin: 0 auto; padding: 10px 20px 0;}
+.book-panel{padding-top:24px;margin-bottom:0px;}
+.book-list {}
+	.box-books h2,.box-books h3 {font-weight: normal;}
+	.book-list li {float:left; width:105px;font-size:12px;margin:0 40px 0 0;height:360px;}
+	.book-list li:last-child {margin-right:0;}
+	.book-cover {height:145px;/*background:#DAE6E8;*/ text-align:center;}
+	.book-cover img {box-shadow:0 2px 3px rgba(0,0,0,.25);border-radius:3px;
+	-webkit-transition:all .1s ease;transition:all .2s ease}
+	.book-item:hover .book-cover img {margin-top:-3px;box-shadow:0 7px 15px rgba(0,0,0,.25);}
+	h2.book-title{margin:14px 0 8px;font-size:13px;color:#383D40;}
+	.book-item:hover .book-title{color:#008B60;}
+	.book-title,.book-info{line-height: 16px}
+	.book-vote{margin:8px 0}
+	.book-vote span {color:#008B60;font-weight: 600}
+	.book-icon{display: inline-block;margin:0 0 3px}
+	.book-info,.book-vote,.book-icon{color:#8B9B9E;}
+	.book-icon{background-color:#DAE6E8;padding:1px 5px;border-radius:2px;}
+	.book-icon:hover{background-color:#008B60;color:#fff;}
+	.bg-warning{background-color:#d98e36;color:#fff;}
+
+.modal.in .modal-dialog {z-index: 1041}
+.pyq-modal {text-align: center}
+	.pyq-modal h3{padding-top:20px;font-size:24px;color:#EB970F;font-weight: normal;}
+	.pyq-modal h4{font-size:18px;font-weight: normal;margin-top:40px;}
+	.pyq-modal h3,.pyq-modal h4,.pyq-modal p{margin-bottom:15px;}
+	.img-pyq {}
+
+.top-text {padding:66px 0 45px;text-align:center; background: #DAE6E8;margin-bottom:28px;}
+	.top-text p:first-child {font-size: 20px;margin-bottom:5px;}
+	.top-text-img {padding:15px 20px 20px;}
+	.top-text-img img{width:100%;max-width: 703px;}
+	.top-text a {color:#383D40;}
+	.top-text a:hover {color:#20a52a;}
+
+.data-content {font-size: 16px;line-height: 1.5em}
+	.data-info {max-width:360px;margin:-133px auto 5px;padding:30px 0; text-align:center;background: #E6F0F2}
+	.data-info h3 {font-weight:normal;margin-bottom:10px;font-size:23px;color:#383D40;letter-spacing:5px;}
+	.data-info-list li {float:left;width:20%;padding:15px;text-align:center;}
+	.data-info-list h4 {font-size:27px;margin-bottom:30px;opacity:.5;font-weight: normal;}
+	.data-info-list li:hover h4 {opacity:1;}
+
+.zz{padding:16px 20px 0;background:#DAE6E8;text-align: center;border-radius: 10px;}
+
+	.zz-method {text-align:center;overflow: hidden}
+	.zz-method h3 {margin:1em 0 .5em;font-size:28px;font-weight: normal;}
+	.zz-method p {font-size:16px;line-height:1.8em;}
+	.pull-left {float:left;}
+	.pull-right {float:right;}
+
+	.bdsharebuttonbox.bdshare-button-style0-24 { width: 250px; margin: 0 auto;}
+	.bdshare-button-style0-24 a { margin-right: 10px !important;}
+	.bdshare-button-style0-24 .bds_count {width:60px !important;}
+@media screen and (min-width: 500px) {
+		.hide-on-pc {display:none;}
+}
+@media screen and (max-width: 500px) {
+		.hide-on-mobile {display:none;}
+
+		.data-info-list {display: flex;flex-direction:row; flex-wrap:wrap;justify-content:center;margin-bottom:15px;}
+		.data-info-list li {float:none;width:45%;}
+		.data-info-list h4 {font-size:16px;margin-bottom:15px;}
+		.data-content {font-size: 12px;}
+
+		.book-list li:after,.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+		.book-list li,.clearfix {zoom:1}
+		.book-panel {padding-top:2px;}
+		.book-panel h3  {font-size:26px;}
+		.book-panel h3 small {display:block;margin-top:10px;line-height:1.75em;font-size:14px;}
+		.book-list {padding-bottom:5px;border-bottom:1px solid #d7e4ec;}
+		.book-list li {float:none;width:100%;height:100%;max-width:100%;margin:5px 0 20px 0; padding-right:0;}
+		h2.book-title {margin:0px 0 6px;font-size:16px;line-height:1.5em;}
+		.book-cover {float:left; margin:0 20px 10px 0;}
+		.book-info {line-height: 1.75em}
+		.book-vote { margin: 8px 0 10px;}
+		.zz{padding:16px 20px 11px;}
+}
