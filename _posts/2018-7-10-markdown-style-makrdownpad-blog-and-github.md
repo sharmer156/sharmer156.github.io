@@ -1,5 +1,21 @@
+---
+layout: post
+title:  "Markdown示例格式 "
+categories: Markdown
+tags:  博客建设 Markdown 示例格式
+author: 飘的沙鸥
+---
+* content
+{:toc}
 # markdown
 markdown somthing
+
+
+
+
+
+
+
 # 目录
 效果：
 - **[环境依赖](#环境依赖)**
@@ -11,10 +27,6 @@ markdown somthing
 - **[引用](#引用)**
 - **[表格](#表格)**
 - **[版本内容更新](#版本内容更新)**
-
-文字格式
-
-
 - **[回目录](#普通目录)**
 
 DEMO
@@ -112,6 +124,7 @@ reids ~
       - [FastText](./机器学习-深度学习-NLP/NLP-词向量.md#fasttext)
       - WordRank TODO
 代码
+
 ```markdown
 ## RoadMap
 - [数学](./数学)
