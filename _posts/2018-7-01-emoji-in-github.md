@@ -7,11 +7,14 @@ tags: md emoji,网站建设，github
 
 * content
 {:toc} 
-github上能使用的emoji
+[github上能使用的emoji](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
 
 
 
 
+
+
+![](https://www.github.com/sharmer156/xiaoshujiangimg/raw/master/小书匠/1537873642388.png)
 
  
 ## People
@@ -209,7 +212,10 @@ github上能使用的emoji
 :rage4:
 :suspect:
 :trollface:
+
 ## Nature
+![](https://www.github.com/sharmer156/xiaoshujiangimg/raw/master/小书匠/1537873676265.png)
+
 :sunny:
 :umbrella:
 :cloud:
@@ -325,7 +331,10 @@ github上能使用的emoji
 :partly_sunny:
 :octocat:
 :squirrel:
+
 ## Objects
+![](https://www.github.com/sharmer156/xiaoshujiangimg/raw/master/小书匠/1537873714523.png)
+
 :bamboo:
 :gift_heart:
 :dolls:
@@ -587,6 +596,8 @@ github上能使用的emoji
 :tomato:
 :corn:
 ## Places
+![](https://www.github.com/sharmer156/xiaoshujiangimg/raw/master/小书匠/1537873738868.png)
+
 :house:
 :house_with_garden:
 :school:
@@ -897,5 +908,6 @@ github上能使用的emoji
 :small_red_triangle_down:
 :shipit:
 Campfire also supports a few sounds 音乐类
+![](https://www.github.com/sharmer156/xiaoshujiangimg/raw/master/小书匠/1537873752677.png)
 ► /play secret► /play trombone► /play crickets► /play rimshot► /play vuvuzela► /play tmyk► /play live► /play drama► /play yeah► /play greatjob► /play pushit► /play nyan► /play tada► /play ohmy► /play bueller► /play ohyeah► /play 56k► /play dangerzone► /play horn► /play horror► /play loggins► /play yodel► /play sax► /play noooo► /play heygirl► /play inconceivable► /play deeper► /play whoomp► /play clowntown► /play what► /play bezos► /play trololo► /play makeitso► /play sexyback► /play bell► /play danielsan► /play greyjoy► /play story► /play dadgummit► /play rollout► /play cottoneyejoe► /play rumble► /play guarantee► /play unix► /play letitgo► /play wups► /play flawless► /play butts
 Emojis and social media
