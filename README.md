@@ -25,7 +25,9 @@ Enter the project folder and add an index.html file:
 cd username.github.io
 ```
 
+```
 echo "Hello World" > index.html
+```
 
 Push it
 
