@@ -17,15 +17,15 @@ canvas {
   background-color: #fff;
   border: 1px solid black;
   /* NOTE: This size is changed if in iframe - see below '.iframe canvas' */
-  width: 400px;
-  height: 300px;
+  width: 508px;
+  height: 500px;
   display: block;
 }
 
 #uiContainer {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: -1px;
+  right: -1px;
   z-index: 3;
   font-family: monospace;
   pointer-events: none;
