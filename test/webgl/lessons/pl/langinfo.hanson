@@ -1,0 +1,17 @@
+{
+  language: 'Polski',
+  langCode: 'pl',
+  defaultExampleCaption: "Kliknij tutaj by otworzyć w nowym oknie",
+  title: 'Podstawy WebGL',
+  description: 'Naucz się WebGL od podstaw. Bez magii.',
+  link: 'https://webglfundamentals.org/webgl/lessons/pl',
+  commentSectionHeader: `
+  <div>Błędy w tłumaczeniu? <a href="https://github.com/vinci-mz/webgl-fundamentals/issues">Stwórz zgłoszenie na platformie github</a>.</div>`,
+  missing: "Sorry this article has not been translated yet. [Translations Welcome](https://github.com/gfxfundamentals/webgl-fundamentals)! 😄\n\n[Here's the original English article for now]({{{origLink}}}).",
+  toc: 'Spis Treści',
+  categoryMapping: {
+    'fundamentals': "Podstawy",
+    'matrices': "2D translation, rotation, scale, matrix math",
+    'misc': "Różności",
+  },
+}
