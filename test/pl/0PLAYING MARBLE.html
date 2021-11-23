@@ -445,7 +445,7 @@ void main() {
 
     let texLoader = new THREE.TextureLoader();
     // Texture Init
-    buffers[0].Shader.uniforms.iChannel0 = { type: 't', value: new THREE.CubeTextureLoader().load([ "cubemap/px.jpg", "cubemap/nx.jpg", "cubemap/py.jpg", "/cubemap/ny.jpg", "cubemap/pz.jpg", "cubemap/nz.jpg" ], function(texture) {
+    buffers[0].Shader.uniforms.iChannel0 = { type: 't', value: new THREE.CubeTextureLoader().load([ "cubemap/px.jpg", "cubemap/nx.jpg", "cubemap/py.jpg", "cubemap/ny.jpg", "cubemap/pz.jpg", "cubemap/nz.jpg" ], function(texture) {
         function isPowerOfTwo(n) {
         return n && (n & (n - 1)) === 0;
     };
